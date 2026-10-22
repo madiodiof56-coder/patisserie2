@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Douceur Royale - Haute Pâtisserie Artisanale. Pâtisseries fines, viennoiseries pur beurre et chocolats d'exception préparés chaque jour avec passion.">
+    <meta name="theme-color" content="#c59a53">
+    <title>Douceur Royale | Pâtisserie Fine & Salon de Douceurs</title>
+
+    <!-- FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Playfair Display & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barre de navigation Sticky Glass -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <a href="#accueil" class="logo">
+                <div class="logo-main">
+                    <i class="fa-solid fa-crown"></i>
+                    DOUCEUR <span>ROYALE</span>
+                </div>
+                <span class="logo-sub">Haute Pâtisserie</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#accueil" class="active">Accueil</a></li>
+                <li><a href="#engagements">Nos Valeurs</a></li>
+                <li><a href="#produits">Pâtisseries</a></li>
+                <li><a href="#apropos">Savoir-Faire</a></li>
+                <li><a href="#avis">Avis</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <a href="#contact" class="nav-contact-pill">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Commander</span>
+                </a>
+
+                <button id="cart-btn" class="icon-btn" aria-label="Ouvrir le panier gourmand" title="Votre Panier">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count">0</span>
+                </button>
+
+                <div class="hamburger" id="hamburger" aria-label="Menu Mobile" role="button" tabindex="0">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section Accueil Hero -->
+    <section id="accueil" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fa-solid fa-sparkles"></i>
+                Maison Fondée avec Passion · Pâtisserie Fine
+            </div>
+            <h1>Le Goût du Bonheur, <span class="gold-gradient">la Douceur du Royaume</span></h1>
+            <p>Créations artisanales façonnées chaque matin avec amour, beurre AOP noble, chocolats grands crus et fruits de première qualité.</p>
+            
+            <div class="hero-actions">
+                <a href="#produits" class="btn btn-primary">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    Découvrir nos créations
+                </a>
+                <a href="#apropos" class="btn btn-outline">
+                    <i class="fa-solid fa-compass"></i>
+                    Notre Savoir-Faire
+                </a>
+            </div>
+
+            <a href="#engagements" class="hero-scroll" aria-label="Défiler vers le bas">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Section Engagements & Valeurs (4 Piliers) -->
+    <section id="engagements" class="engagements-section">
+        <div class="container">
+            <div class="engagements-grid">
+                <div class="engagement-item">
+                    <div class="engagement-icon">
+                        <i class="fa-solid fa-wheat-awn"></i>
+                    </div>
+                    <div class="engagement-text">
+                        <h4>100% Artisanal</h4>
+                        <p>Farines nobles sélectionnées et levain naturel travaillé chaque nuit.</p>
+                    </div>
+                </div>
+
+                <div class="engagement-item">
+                    <div class="engagement-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <div class="engagement-text">
+                        <h4>Beurre AOP Pur</h4>
+                        <p>Feuilletage croustillant et doré au beurre Charentes-Poitou.</p>
+                    </div>
+                </div>
+
+                <div class="engagement-item">
+                    <div class="engagement-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div class="engagement-text">
+                        <h4>Click & Collect</h4>
+                        <p>Préparation express en 30 min ou livraison soignée à domicile.</p>
+                    </div>
+                </div>
+
+                <div class="engagement-item">
+                    <div class="engagement-icon">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <div class="engagement-text">
+                        <h4>Chocolats Grands Crus</h4>
+                        <p>Fèves intenses de cacao pur et vanille bourbon de Madagascar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Produits & Catalogue -->
+    <section id="produits" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Notre Carte Gourmande</span>
+                <h2 class="section-title">Nos Créations Phares</h2>
+                <p class="section-subtitle">Laissez-vous tenter par une symphonie de textures exquises et de douceurs raffinées</p>
+                <div class="section-divider">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+            </div>
+
+            <!-- Filtres des catégories -->
+            <div class="category-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fa-solid fa-border-all"></i>
+                    <span>Toutes nos créations</span>
+                </button>
+                <button class="filter-btn" data-filter="entremets">
+                    <i class="fa-solid fa-cake-candles"></i>
+                    <span>Entremets & Gâteaux</span>
+                </button>
+                <button class="filter-btn" data-filter="viennoiseries">
+                    <i class="fa-solid fa-bread-slice"></i>
+                    <span>Viennoiseries Pur Beurre</span>
+                </button>
+                <button class="filter-btn" data-filter="chocolats">
+                    <i class="fa-solid fa-cookie-bite"></i>
+                    <span>Chocolats Fins</span>
+                </button>
+            </div>
+
+            <!-- Grille de produits dynamiques -->
+            <div class="products-grid">
+                <!-- Produit 1 -->
+                <article class="product-card" data-category="entremets">
+                    <div class="product-image-wrap">
+                        <span class="product-badge gold">Best-seller</span>
+                        <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80" alt="Tarte Citron Meringuée" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-meta">
+                            <span class="product-cat-name">Entremets</span>
+                            <div class="product-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.9 (54 avis)</span>
+                            </div>
+                        </div>
+                        <h3>Tarte Citron Meringuée</h3>
+                        <p class="product-desc">Pâte sablée croustillante, crème citron onctueuse de Sicile et meringue italienne délicatement dorée au chalumeau.</p>
+                        <div class="product-footer">
+                            <span class="price">4 500 <small>FCFA</small></span>
+                            <button class="add-to-cart" data-name="Tarte Citron Meringuée" data-price="4500" data-image="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Ajouter</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 2 -->
+                <article class="product-card" data-category="entremets">
+                    <div class="product-image-wrap">
+                        <span class="product-badge">Coup de Cœur</span>
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Éclair Chocolat Noir" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-meta">
+                            <span class="product-cat-name">Entremets</span>
+                            <div class="product-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span>5.0 (38 avis)</span>
+                            </div>
+                        </div>
+                        <h3>Éclair Chocolat Noir Grand Cru</h3>
+                        <p class="product-desc">Pâte à choux aérienne, crème pâtissière au chocolat noir 70% d'Équateur et glaçage miroir étincelant.</p>
+                        <div class="product-footer">
+                            <span class="price">3 800 <small>FCFA</small></span>
+                            <button class="add-to-cart" data-name="Éclair Chocolat Noir Grand Cru" data-price="3800" data-image="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Ajouter</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 3 -->
+                <article class="product-card" data-category="viennoiseries">
+                    <div class="product-image-wrap">
+                        <span class="product-badge">Fait maison</span>
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80" alt="Croissant Pur Beurre" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-meta">
+                            <span class="product-cat-name">Viennoiseries</span>
+                            <div class="product-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.8 (82 avis)</span>
+                            </div>
+                        </div>
+                        <h3>Croissant Pur Beurre AOP</h3>
+                        <p class="product-desc">Feuilletage croustillant et alvéolé au beurre AOP Charentes-Poitou, doré à cœur pour un plaisir incomparable.</p>
+                        <div class="product-footer">
+                            <span class="price">1 500 <small>FCFA</small></span>
+                            <button class="add-to-cart" data-name="Croissant Pur Beurre AOP" data-price="1500" data-image="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Ajouter</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 4 -->
+                <article class="product-card" data-category="entremets">
+                    <div class="product-image-wrap">
+                        <span class="product-badge gold">Signature</span>
+                        <img src="https://images.unsplash.com/photo-1569864321281-22920c8ec42d?auto=format&fit=crop&w=600&q=80" alt="Macaron Framboise & Rose" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-meta">
+                            <span class="product-cat-name">Entremets</span>
+                            <div class="product-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.9 (46 avis)</span>
+                            </div>
+                        </div>
+                        <h3>Macaron Framboise & Rose</h3>
+                        <p class="product-desc">Coques amande croustillantes et moelleuses, ganache montée à l'eau de rose de Damas et insert framboises fraîches.</p>
+                        <div class="product-footer">
+                            <span class="price">2 500 <small>FCFA</small></span>
+                            <button class="add-to-cart" data-name="Macaron Framboise & Rose" data-price="2500" data-image="https://images.unsplash.com/photo-1569864321281-22920c8ec42d?auto=format&fit=crop&w=600&q=80">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Ajouter</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 5 -->
+                <article class="product-card" data-category="viennoiseries">
+                    <div class="product-image-wrap">
+                        <span class="product-badge">Pur Beurre</span>
+                        <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=600&q=80" alt="Pain au Chocolat" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-meta">
+                            <span class="product-cat-name">Viennoiseries</span>
+                            <div class="product-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span>4.9 (67 avis)</span>
+                            </div>
+                        </div>
+                        <h3>Pain au Chocolat Feuilleté</h3>
+                        <p class="product-desc">Deux généreuses barres de chocolat noir d'origine enveloppées dans un feuilletage caramélisé et beurré.</p>
+                        <div class="product-footer">
+                            <span class="price">1 800 <small>FCFA</small></span>
+                            <button class="add-to-cart" data-name="Pain au Chocolat Feuilleté" data-price="1800" data-image="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=600&q=80">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Ajouter</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 6 -->
+                <article class="product-card" data-category="chocolats">
+                    <div class="product-image-wrap">
+                        <span class="product-badge gold">Prestige</span>
+                        <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=600&q=80" alt="Coffret Truffes Chocolat" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-meta">
+                            <span class="product-cat-name">Chocolats</span>
+                            <div class="product-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span>5.0 (29 avis)</span>
+                            </div>
+                        </div>
+                        <h3>Coffret Truffes Royales (12 pcs)</h3>
+                        <p class="product-desc">Truffes d'exception au cœur fondant de ganache noire grand cru, roulées à la main dans un cacao pur non sucré.</p>
+                        <div class="product-footer">
+                            <span class="price">12 000 <small>FCFA</small></span>
+                            <button class="add-to-cart" data-name="Coffret Truffes Royales (12 pcs)" data-price="12000" data-image="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=600&q=80">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Ajouter</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bannière Créations Événements & Sur-Mesure -->
+    <section class="spotlight-banner">
+        <div class="container">
+            <div class="spotlight-content">
+                <div class="spotlight-text">
+                    <span class="section-tag" style="background: rgba(197, 154, 83, 0.2); color: var(--primary-light);">
+                        <i class="fa-solid fa-cake-candles"></i> Événements & Célébrations
+                    </span>
+                    <h3>Un Gâteau d'Exception pour vos Plus Beaux Moments</h3>
+                    <p>Mariages, anniversaires, réceptions d'entreprise : nous concevons votre pièce montée personnalisée selon vos désirs gustatifs et esthétiques.</p>
+                </div>
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    Demander un Devis Gratuit
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos & Savoir-Faire -->
+    <section id="apropos" class="about-section">
+        <div class="container about-grid">
+            <div class="about-visual">
+                <img src="images/chefff.2.jpg" alt="Chef pâtissier décorant un gâteau d'exception" class="about-main-img" loading="lazy">
+
+                <div class="about-experience-badge">
+                    <span class="years">6 Ans</span>
+                    <span class="label">D'Excellence</span>
+                </div>
+            </div>
+
+            <div class="about-text">
+                <span class="section-tag"><i class="fa-solid fa-crown"></i> Notre Savoir-Faire</span>
+                <h2>L'Excellence de la Pâtisserie Artisanale</h2>
+                <p>Fondée en 2018 par le <strong>Chef Pape</strong>, la maison <strong>DOUCEUR ROYALE</strong> allie la rigueur de la haute tradition française à une créativité contemporaine audacieuse.</p>
+                <p>Chaque pièce est confectionnée dans notre laboratoire à partir d'ingrédients rigoureusement sélectionnés : farines locales d'exception, beurres AOP, vanille Bourbon et fruits de saison issus de productions responsables.</p>
+
+                <!-- Citation du Chef -->
+                <div class="chef-quote">
+                    <p>« La pâtisserie est une émotion pure où chaque gramme compte, chaque texture raconte une histoire et chaque bouchée est une promesse de bonheur. »</p>
+                    <span class="chef-author">— Chef Pape, Maître Pâtissier Fondateur</span>
+                </div>
+
+                <div class="about-features">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-wheat-awn"></i>
+                        <span>100% Fait Maison</span>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fa-solid fa-seedling"></i>
+                        <span>Ingrédients Éthiques</span>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fa-solid fa-certificate"></i>
+                        <span>Zéro Conservateur</span>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Passion & Passion</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Avis clients (Témoignages) -->
+    <section id="avis" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-star"></i> Retours Gourmands</span>
+                <h2 class="section-title">Ce que disent nos clients</h2>
+                <p class="section-subtitle">Plus de 500 gourmets nous font confiance pour illuminer leurs journées et leurs célébrations</p>
+                <div class="section-divider">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>« La tarte au citron meringuée est tout simplement la meilleure que j'aie goûtée ! La meringue est aérienne, le crémeux citron parfaitement équilibré sans acidité agressive. Bravo au Chef ! »</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MF</div>
+                        <div class="author-details">
+                            <h4>Madiodio F.</h4>
+                            <span><i class="fa-solid fa-circle-check"></i> Client Vérifié · Tarte Citron</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>« Leurs croissants au beurre AOP sont devenus un rituel incontournable pour notre petit-déjeuner du dimanche en famille. Le feuilletage est si croustillant qu'il fond en bouche. Service irréprochable. »</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">TD</div>
+                        <div class="author-details">
+                            <h4>Thiarra D.</h4>
+                            <span><i class="fa-solid fa-circle-check"></i> Cliente Vérifiée · Viennoiseries</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <i class="fa-solid fa-quote-right quote-icon"></i>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>« Nous avons commandé notre gâteau d'anniversaire personnalisé ici : une pièce magistrale tant visuellement que gustativement. Tous nos invités étaient émerveillés ! »</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AS</div>
+                        <div class="author-details">
+                            <h4>Amadou S.</h4>
+                            <span><i class="fa-solid fa-circle-check"></i> Client Vérifié · Commande sur-mesure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact / Commande & Horaires -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-location-dot"></i> Nous Trouver & Commander</span>
+                <h2 class="section-title">Contactez l'Atelier Douceur Royale</h2>
+                <p class="section-subtitle">Une question, une commande personnalisée ou une réservation ? Écrivez-nous ou rendez-nous visite</p>
+                <div class="section-divider">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Carte Informations & Horaires -->
+                <div class="contact-card-info">
+                    <div>
+                        <div class="live-status-pill">
+                            <span class="indicator-dot"></span>
+                            <span id="store-status">Boutique Ouverte aujourd'hui jusqu'à 19h30</span>
+                        </div>
+                        <h3>Informations Pratiques</h3>
+                        <p class="info-intro">Venez savourer nos douceurs tout juste sorties de nos fournils ou faites-vous livrer chez vous en toute sérénité.</p>
+
+                        <div class="contact-items-list">
+                            <div class="contact-item">
+                                <div class="contact-item-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="contact-item-text">
+                                    <h5>Notre Boutique</h5>
+                                    <p>14 Rue Angle Panier, Diamaguène</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-item-icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="contact-item-text">
+                                    <h5>Téléphone & WhatsApp</h5>
+                                    <a href="tel:+33142680000">+33 1 42 68 00 00</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-item-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="contact-item-text">
+                                    <h5>Email Officiel</h5>
+                                    <a href="mailto:contact@douceurroyale.fr">contact@douceurroyale.fr</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-item-icon">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div class="contact-item-text">
+                                    <h5>Horaires d'Ouverture</h5>
+                                    <p>Mardi au Dimanche : 7h00 - 19h30<br><small style="color: rgba(255,255,255,0.7);">(Fermé le Lundi)</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/33142680000?text=Bonjour%20Douceur%20Royale,%20je%20souhaite%20commander" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Discuter directement sur WhatsApp
+                    </a>
+                </div>
+
+                <!-- Formulaire de contact -->
+                <div class="contact-form-wrap">
+                    <h3>Envoyez-nous un Message</h3>
+                    <p>Pour une commande spéciale, un devis d'événement ou un simple mot doux :</p>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="contact-name">Votre Nom complet *</label>
+                                <input type="text" id="contact-name" placeholder="Ex: Aïcha Diallo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Votre Adresse Email *</label>
+                                <input type="email" id="contact-email" placeholder="nom@exemple.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="contact-phone">Numéro de Téléphone</label>
+                                <input type="tel" id="contact-phone" placeholder="Ex: 77 123 45 67">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-type">Type de Demande</label>
+                                <select id="contact-type">
+                                    <option value="sur-mesure">Gâteau sur-mesure / Anniversaire</option>
+                                    <option value="evenement">Mariage / Réception d'entreprise</option>
+                                    <option value="reservation">Réservation / Retrait express</option>
+                                    <option value="autre">Autre question</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="contact-message">Votre Message ou Détails de la commande *</label>
+                            <textarea id="contact-message" placeholder="Décrivez votre envie, le nombre de parts souhaité, la date de l'événement..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Haute Pâtisserie -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo-main" style="color: var(--white); font-size: 1.6rem; margin-bottom: 12px;">
+                        <i class="fa-solid fa-crown" style="color: var(--primary);"></i>
+                        DOUCEUR <span>ROYALE</span>
+                    </div>
+                    <p>L'excellence de la haute pâtisserie artisanale. Des créations raffinées façonnées au rythme des saisons avec des ingrédients nobles et une passion sans limite.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <div class="footer-links">
+                        <a href="#accueil"><i class="fa-solid fa-angle-right"></i> Accueil</a>
+                        <a href="#produits"><i class="fa-solid fa-angle-right"></i> La Carte Gourmande</a>
+                        <a href="#engagements"><i class="fa-solid fa-angle-right"></i> Nos Engagements</a>
+                        <a href="#apropos"><i class="fa-solid fa-angle-right"></i> Notre Savoir-Faire</a>
+                        <a href="#avis"><i class="fa-solid fa-angle-right"></i> Témoignages Clients</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Horaires & Retrait</h4>
+                    <p style="font-size: 0.88rem; margin-bottom: 8px;"><strong>Mar - Dim :</strong> 7h00 - 19h30</p>
+                    <p style="font-size: 0.88rem; margin-bottom: 16px;"><strong>Lundi :</strong> Fermé</p>
+                    <p style="font-size: 0.88rem;"><i class="fa-solid fa-shield-halved" style="color: var(--primary);"></i> Hygiène & sécurité certifiées</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Privilège Gourmand</h4>
+                    <p>Recevez nos créations éphémères et bénéficiez de 10% sur votre première commande en ligne :</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Merci pour votre inscription au Cercle Privilège Douceur Royale !'); this.reset();">
+                        <input type="email" placeholder="Votre email..." required>
+                        <button type="submit" aria-label="S'inscrire"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 DOUCEUR ROYALE · Haute Pâtisserie Artisanale. Tous droits réservés.</p>
+                <a href="admin.html" class="admin-link">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Espace Administration</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Panier Glissant (Drawer Modal) -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-modal" id="cart-modal" aria-labelledby="cart-title" role="dialog" aria-modal="true">
+        <div class="cart-header">
+            <h3 id="cart-title"><i class="fa-solid fa-bag-shopping"></i> Votre Panier Gourmand</h3>
+            <button id="close-cart" class="close-btn" aria-label="Fermer le panier">&times;</button>
+        </div>
+
+        <!-- Barre livraison offerte -->
+        <div class="free-shipping-progress" id="free-shipping-container">
+            <div class="progress-text">
+                <span id="shipping-msg">Livraison offerte dès 25 000 FCFA</span>
+                <span id="shipping-percent">0%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="shipping-bar" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <div class="cart-items" id="cart-items">
+            <!-- Articles injectés par JS -->
+            <div class="empty-cart-msg">
+                <i class="fa-solid fa-cookie-bite"></i>
+                <p>Votre panier est vide pour le moment.</p>
+                <a href="#produits" class="btn btn-outline" style="margin-top: 15px; color: var(--dark); border-color: var(--dark);" onclick="document.getElementById('cart-modal').classList.remove('open'); document.getElementById('cart-overlay').classList.remove('show');">Découvrir la carte</a>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total à régler :</span>
+                <span id="cart-total-price">0 FCFA</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" id="checkout-btn">
+                <i class="fa-solid fa-check"></i>
+                Valider ma commande
+            </button>
+        </div>
+    </div>
+
+    <!-- Modale de Confirmation de Commande -->
+    <div class="checkout-modal" id="checkout-modal" role="dialog" aria-modal="true">
+        <div class="checkout-dialog">
+            <div class="checkout-dialog-header">
+                <h3><i class="fa-solid fa-bag-shopping text-gold"></i> Finaliser ma commande</h3>
+                <button class="close-btn" id="close-checkout" aria-label="Fermer">&times;</button>
+            </div>
+            
+            <div class="order-method-tabs">
+                <div class="order-method-tab active" data-method="pickup">
+                    <i class="fa-solid fa-store"></i> Retrait en boutique (Click & Collect)
+                </div>
+                <div class="order-method-tab" data-method="delivery">
+                    <i class="fa-solid fa-truck"></i> Livraison à domicile
+                </div>
+            </div>
+
+            <form id="order-form" class="admin-form">
+                <label for="order-name">Votre Nom et Prénom *</label>
+                <input id="order-name" type="text" placeholder="Ex: Fatou Ndiaye" required>
+
+                <label for="order-phone">Numéro de Téléphone / WhatsApp *</label>
+                <input id="order-phone" type="tel" placeholder="Ex: 77 000 00 00" required>
+
+                <div id="delivery-address-group" style="display: none;">
+                    <label for="order-address">Adresse complète de livraison *</label>
+                    <input id="order-address" type="text" placeholder="Quartier, Rue, N° de villa ou repère">
+                </div>
+
+                <label for="order-notes">Instructions particulières (message sur gâteau, heure souhaitée...)</label>
+                <textarea id="order-notes" rows="2" placeholder="Ex: Veuillez inscrire 'Joyeux Anniversaire Sophie' sur le gâteau"></textarea>
+
+                <div style="background: var(--secondary-light); padding: 14px 18px; border-radius: var(--radius-md); margin-top: 10px; font-size: 0.95rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                        <span>Sous-total commande :</span>
+                        <strong id="modal-order-total">0 FCFA</strong>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted);">
+                        Paiement sécurisé lors du retrait ou à la livraison (Espèces, Wave, Orange Money).
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 12px; margin-top: 20px;">
+                    <button type="button" class="btn btn-outline" id="cancel-checkout" style="color: var(--dark); border-color: var(--border-color); flex: 1;">Retour</button>
+                    <button type="submit" class="btn btn-primary" style="flex: 2;">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Confirmer la commande
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification Unique -->
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-message">Article ajouté au panier !</span>
+    </div>
+
+    <!-- Bouton Retour en Haut -->
+    <button class="back-to-top" id="back-to-top" aria-label="Remonter en haut de page">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

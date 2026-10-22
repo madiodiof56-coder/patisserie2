@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#c59a53">
+    <title>Administration | Douceur Royale - Gestion du Catalogue</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-page">
+    <header class="admin-header">
+        <a href="index.html" class="logo">
+            <div class="logo-main">
+                <i class="fa-solid fa-crown"></i>
+                DOUCEUR <span>ROYALE</span>
+            </div>
+            <span class="logo-sub">Haute Pâtisserie</span>
+        </a>
+        <a class="admin-back-link" href="index.html">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Retour à la boutique</span>
+        </a>
+    </header>
+
+    <main class="admin-main">
+        <!-- Connexion Admin -->
+        <section class="admin-login" id="admin-login">
+            <p class="admin-eyebrow">Espace Privé · Démonstration</p>
+            <h1>Administration</h1>
+            <p class="admin-intro">Connectez-vous pour ajouter, modifier ou retirer les créations proposées en boutique.</p>
+            <form id="login-form" class="admin-form">
+                <label for="admin-username">Identifiant de connexion</label>
+                <input id="admin-username" name="username" autocomplete="username" placeholder="admin" required>
+                <label for="admin-password">Mot de passe</label>
+                <input id="admin-password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required>
+                <p class="admin-error" id="login-error" role="alert"></p>
+                <button class="admin-primary-button" type="submit">
+                    <span>Se connecter</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+            <div class="admin-demo-note">
+                <i class="fa-solid fa-key" style="color: var(--primary);"></i> Identifiants de démo : <strong>admin</strong> / <strong>admin123</strong>
+            </div>
+            <p class="admin-security-note">Cet accès démonstratif stocke vos données dans le stockage local du navigateur.</p>
+        </section>
+
+        <!-- Tableau de Bord Admin -->
+        <section class="admin-dashboard" id="admin-dashboard" hidden>
+            <div class="admin-title-row">
+                <div>
+                    <p class="admin-eyebrow">DOUCEUR ROYALE · CATALOGUE ARTISANAL</p>
+                    <h1>Gestion des Créations</h1>
+                    <p class="admin-intro">Les modifications apportées ici sont immédiatement visibles sur la boutique.</p>
+                </div>
+                <button class="admin-logout" id="logout-button" type="button">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Déconnexion</span>
+                </button>
+            </div>
+
+            <div class="admin-summary" aria-live="polite">
+                <span><i class="fa-solid fa-boxes-stacked text-gold"></i> <strong id="product-count">0</strong> créations enregistrées</span>
+                <span><i class="fa-solid fa-circle-check" style="color: var(--success);"></i> Synchronisation automatique locale</span>
+            </div>
+
+            <div class="admin-workspace">
+                <section class="admin-product-list" aria-labelledby="catalog-title">
+                    <div class="admin-section-heading">
+                        <h2 id="catalog-title">Catalogue en ligne</h2>
+                        <button class="admin-primary-button add-product-button" id="new-product-button" type="button">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>Nouvelle Création</span>
+                        </button>
+                    </div>
+                    <div class="admin-table-wrap">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Pâtisserie</th>
+                                    <th>Catégorie</th>
+                                    <th>Prix</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="product-table-body"></tbody>
+                        </table>
+                    </div>
+                    <p class="admin-empty" id="empty-products" hidden style="text-align: center; padding: 40px; color: var(--text-muted);">
+                        Aucune création pour le moment. Cliquez sur « Nouvelle Création » pour commencer.
+                    </p>
+                </section>
+
+                <!-- Éditeur de Produit (Ajout / Modification) -->
+                <section class="admin-editor" id="product-editor" aria-labelledby="editor-title" hidden>
+                    <div class="admin-section-heading">
+                        <h2 id="editor-title">Nouvelle création</h2>
+                        <button class="admin-icon-button" id="cancel-edit-button" type="button" aria-label="Fermer le formulaire" title="Fermer">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <form id="product-form" class="admin-form">
+                        <input id="product-id" type="hidden">
+
+                        <label for="product-name">Nom de la création *</label>
+                        <input id="product-name" maxlength="80" placeholder="Ex: Saint-Honoré Vanille & Caramel" required>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div>
+                                <label for="product-category">Catégorie *</label>
+                                <select id="product-category" required>
+                                    <option value="entremets">Entremets & Gâteaux</option>
+                                    <option value="viennoiseries">Viennoiseries Pur Beurre</option>
+                                    <option value="chocolats">Chocolats Fins</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="product-price">Prix en FCFA *</label>
+                                <input id="product-price" type="number" min="1" step="100" placeholder="Ex: 4500" required>
+                            </div>
+                        </div>
+
+                        <label for="product-image">Adresse URL de la photo *</label>
+                        <input id="product-image" type="text" placeholder="images/gateaux.jpg ou URL https://" required>
+
+                        <label for="product-description">Description gourmande & Ingrédients *</label>
+                        <textarea id="product-description" rows="3" maxlength="280" placeholder="Pâte sablée croustillante, crème légère infusée..." required></textarea>
+
+                        <label for="product-badge">Badge distinctif (facultatif)</label>
+                        <input id="product-badge" maxlength="30" placeholder="Ex: Best-seller, Fait Maison, Coup de Cœur...">
+
+                        <div class="admin-form-actions">
+                            <button class="admin-secondary-button" id="cancel-form-button" type="button">Annuler</button>
+                            <button class="admin-primary-button" type="submit">
+                                <i class="fa-solid fa-floppy-disk"></i>
+                                <span>Enregistrer la création</span>
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <p class="admin-security-note">Les produits sont enregistrés en toute autonomie sur cet appareil via le stockage local (HTML5 LocalStorage).</p>
+        </section>
+    </main>
+
+    <div class="admin-toast" id="admin-toast" role="status" aria-live="polite"></div>
+    <script src="admin.js"></script>
+</body>
+</html>
